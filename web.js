@@ -5,7 +5,7 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   fs.readFileSync('index.html', function (err, data) {
-    iff (err) throw err;
+    if (err) throw err;
     response.send(buf.toString(data)); 
   }
 });
